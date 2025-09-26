@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "adm-zip": "0.4.11",
+    "body-parser": "^1.19.0",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
