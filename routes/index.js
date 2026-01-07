@@ -9,6 +9,11 @@ var streamBuffers = require('stream-buffers');
 var readline = require('readline');
 var moment = require('moment');
 var exec = require('child_process').exec;
+var RateLimit = require('express-rate-limit');
+var limiter = new RateLimit({
+  windowMs: 30 * 60 * 1000, // 30 minutes
+  limit: 5, // Limit each IP to 5 requests per windowMs
+});
 var validator = require('validator');
 
 // zip-slip
